@@ -1,0 +1,14 @@
+/* ubuntu-regular - latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+       url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+

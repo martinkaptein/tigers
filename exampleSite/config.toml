@@ -1,0 +1,38 @@
+baseURL = "https://example.com"
+title = "Tigers"
+theme = "tigers"
+languageCode = "en-US"
+DefaultContentLanguage = "en"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
+paginate = 20
+
+
+# fallback settings, better for them to be defined by language, if you are planning on having a multilanguage project
+
+[params]
+  HomeListAllPages = false
+  sitename = "Tigers"
+  description = "Tigers theme description"
+  subHeader = 'Hello World! I am the tigers theme for Hugo.'
+  footerHTML = '(c) 2020 Your Name'
+  strNextPage = "next page"
+  strPreviousPage = "previous page"
+  metaImage = "/images/himalaya_painting.jpg"
+  siteAuthor = "Your Name"
+
+
+[languages]
+
+[languages.en] 
+languageName = "English"
+
+[languages.nl] 
+languageName = "Nederlands"
+[languages.nl.params]
+# possible param overwrites go here
+sitename = "Tijgers"
+subHeader = 'Hallo Wereld! Ik ben het tijgers thema voor Hugo.'
+footerHTML = '(c) 2020 Mijn Naam'
+strNextPage = "volgende pagina"
+strPreviousPage = "vorige pagina"

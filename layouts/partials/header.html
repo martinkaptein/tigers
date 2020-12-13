@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ .Language }}">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="true"/>
+  <link rel='canonical' href='{{ .Permalink }}'>
+
+        <link rel="stylesheet" href="/assets/css/font.css">
+
+    <meta name="description" content="{{ .Description }}">
+    {{ if .Params.Tags }}
+<meta name="keywords" content="{{ with .Params.Tags }}{{ delimit . ", " }}{{ end }}" />
+    {{ end}}
+    {{ if .Params.Keywords }}
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ end }}" />
+    {{ end}}
+    <meta name="author" content="{{ .Site.Params.siteAuthor }}">
+    <title>{{ .Title | default "Tigers" }} - {{ .Site.Params.sitename | default "Tigers" }}</title>
+
+        <link rel="stylesheet" href="/assets/css/stylesheet.css">
+
+    <!-- Internationalization stuff -->
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+  <link rel='alternate' hreflang='{{ .Lang }}' href='{{ .Permalink }}'>
+  {{ end }}
+  {{- with index .Site.Home.AllTranslations 0 -}}
+    <link rel='alternate' hreflang='x-default' href='{{ .Permalink }}'>
+    {{ end }}
+  {{ end }}
+
+    <!-- Icons and stuff -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#FFA86A">
+
+<!-- Opengraph -->
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.sitename }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .Params.metaImage }}
+<meta property="og:image" content="{{ .Params.metaImage | absURL }}">
+{{ else if .Site.Params.metaImage }}
+<meta property="og:image" content="{{ .Site.Params.metaImage | absURL }}">
+{{ end }}
+
+
+<!-- RSS stuff -->
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    </head>
+    <body>
+	    <header>
+        <section class="header">
+		<div>
+            <h1><a href="/">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
+		</div>
+	    {{ if .IsHome }}
+	    <div class="subheader">
+	    <p>
+	    {{ .Site.Params.subHeader | safeHTML | default "Hello World! This is tigers theme." }}
+	    </p>
+	    </div>
+	    {{ end }}
+        </section>
+	</header>

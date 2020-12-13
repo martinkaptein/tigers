@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+<section id="content">
+    <!-- Language menu -->
+    <ul>
+	    {{ range $.Site.Home.AllTranslations }}
+	    <div>
+		    <div class="list">
+			    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+		    </div>
+	    </div>
+	    {{ end }}
+    </ul>
+	<!--Menu-->
+    <ul>
+	    {{ range .Site.Menus.main }}
+	    <div>
+		    <div class="list">
+			    <a href="{{ .URL }}">{{ .Title }}</a>
+		    </div>
+	    </div>
+	    {{ end }}
+    </ul>
+	<!--Optional generic page listing-->
+    <ul>
+	    {{ if ne .Site.Params.HomeListAllPages false }}
+	    {{ range .Pages }}
+	    <div>
+		    <div class="list">
+			    <a href="{{ .Permalink }}">{{ .Title }}</a>
+		    </div>
+	    </div>
+	    {{ end }}
+	    {{ end }}
+    </ul>
+  </section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+
+<section id=content>
+    <!--List of posts-->
+    <ul>
+	{{ range .Paginator.Pages }}
+        <div class="list">
+          <div>
+              <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006-01-02" }}</time>
+          </div>
+          <div>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </div>
+        </div>
+      {{ end }}
+    </ul>
+    <!--Pagination menu-->
+    <ul class="pagination">
+	    {{ with .Paginator.Prev }}
+	    <div>
+		    <div class="list">
+			    <a href="{{ .URL }}">{{ $.Site.Params.strPreviousPage | default "previous page"}}</a>
+		    </div>
+	    </div>
+	    {{ end }}
+	    {{ with .Paginator.Next }}
+	    <div>
+		    <div class="list">
+			    <a href="{{ .URL }}">{{ $.Site.Params.strNextPage | default "next page"}}</a>
+		    </div>
+	    </div>
+	    {{ end }}
+    </ul>
+  </section>
+
+{{ partial "footer.html" . }}

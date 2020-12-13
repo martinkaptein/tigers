@@ -1,0 +1,84 @@
+/*body defaults*/
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    margin: auto;
+    max-width: 50em;
+    font-size: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* exceptions from default case: header, footer, subheader, list, pagination */
+
+.header {
+    text-align: center;
+}
+
+.header a {
+	text-decoration: none;
+}
+
+.header a:hover {
+	text-decoration: underline;
+}
+
+.subheader a:hover, .footer a:hover {
+	text-decoration: none;
+}
+
+.subheader a, .footer a {
+	text-decoration: underline;
+}
+
+.footer {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.list {
+	/*
+    padding-left: 1em;
+    padding-right: 1em;
+    */
+    padding-top: 0.5em;
+}
+
+
+.list a {
+	text-decoration: none;
+}
+
+.list a:hover {
+	text-decoration: underline;
+}
+
+.pagination {
+	text-align: center;
+}
+
+
+/*neccessary overwrites*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+pre code {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: block;
+	word-wrap: normal;
+    }
