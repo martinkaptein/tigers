@@ -8,7 +8,7 @@ You can see this theme in action [on my personal website](https://www.martinkapt
 
 ## Screenshot
 
-![Screenshot of the Tigers theme](https://github.com/martinkaptein/tigers/blob/master/images/screenshot.png)
+![Screenshot of the Tigers theme](https://raw.githubusercontent.com/martinkaptein/tigers/main/images/screenshot.png)
 
 ## Features
 
