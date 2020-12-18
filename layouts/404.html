@@ -5,20 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="HandheldFriendly" content="true"/>
 
-        <link rel="stylesheet" href="/assets/css/font.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/css/font.css">
 
     <title>404 Page not found - {{ .Site.Params.sitename }}</title>
 
-        <link rel="stylesheet" href="/assets/css/stylesheet.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/css/stylesheet.css">
 
 
     <!-- Icons and stuff -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/svg+xml" href="{{ .Site.BaseURL }}favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+<link rel="alternate icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon-32x32.png">
+<link rel="alternate icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon-16x16.png">
+<link rel="manifest" href="{{ .Site.BaseURL }}site.webmanifest">
+<link rel="mask-icon" href="{{ .Site.BaseURL }}safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#FFA86A">
 
@@ -27,7 +27,7 @@
 	    <header>
         <section class="header">
 		<div id="page-title">
-            <h1><a href="/">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
+            <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
 	    {{ if .IsHome }}
 	    <div class="subheader">
@@ -41,7 +41,7 @@
 <section>
     <h1>404 Page not found</h1>
     <div>
-	    <p>404 Error, page not found. Perhaps you will find what you where looking for on the <a href="/">homepage</a>.</p>
+	    <p>404 Error, page not found. Perhaps you will find what you where looking for on the <a href="{{ .Site.BaseURL }}">homepage</a>.</p>
     </div>
 </section>
 </article>

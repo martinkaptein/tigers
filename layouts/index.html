@@ -16,7 +16,7 @@
 	    {{ range .Site.Menus.main }}
 	    <div>
 		    <div class="list">
-			    <a href="{{ .URL }}">{{ .Title }}</a>
+			    <a href="{{ .URL | absURL }}">{{ .Title }}</a>
 		    </div>
 	    </div>
 	    {{ end }}
