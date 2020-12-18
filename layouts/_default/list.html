@@ -19,14 +19,14 @@
 	    {{ with .Paginator.Prev }}
 	    <div>
 		    <div class="list">
-			    <a href="{{ .URL }}">{{ $.Site.Params.strPreviousPage | default "previous page"}}</a>
+			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strPreviousPage | default "previous page"}}</a>
 		    </div>
 	    </div>
 	    {{ end }}
 	    {{ with .Paginator.Next }}
 	    <div>
 		    <div class="list">
-			    <a href="{{ .URL }}">{{ $.Site.Params.strNextPage | default "next page"}}</a>
+			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strNextPage | default "next page"}}</a>
 		    </div>
 	    </div>
 	    {{ end }}
