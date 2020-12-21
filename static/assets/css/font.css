@@ -10,5 +10,6 @@
        url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
        url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('/assets/css/font/ubuntu-v15-latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 

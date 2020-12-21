@@ -2,8 +2,9 @@
 
 <section id=content>
     <!--List of posts-->
-    <ul>
+    <ul class="bulletless">
 	{{ range .Paginator.Pages }}
+	<li>
         <div class="list">
           <div>
               <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006-01-02" }}</time>
@@ -12,23 +13,28 @@
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </div>
         </div>
+	</li>
       {{ end }}
     </ul>
     <!--Pagination menu-->
-    <ul class="pagination">
+    <ul class="pagination bulletless">
 	    {{ with .Paginator.Prev }}
+	    <li>
 	    <div>
 		    <div class="list">
 			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strPreviousPage | default "previous page"}}</a>
 		    </div>
 	    </div>
+	    </li>
 	    {{ end }}
 	    {{ with .Paginator.Next }}
+	    <li>
 	    <div>
 		    <div class="list">
 			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strNextPage | default "next page"}}</a>
 		    </div>
 	    </div>
+	    </li>
 	    {{ end }}
     </ul>
   </section>

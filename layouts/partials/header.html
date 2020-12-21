@@ -6,7 +6,7 @@
 	<meta name="HandheldFriendly" content="true"/>
   <link rel='canonical' href='{{ .Permalink }}'>
 
-  <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >
 
     <meta name="description" content="{{ .Description }}">
     {{ if .Params.Tags }}
@@ -18,7 +18,7 @@
     <meta name="author" content="{{ .Site.Params.siteAuthor }}">
     <title>{{ .Title | default "Tigers" }} - {{ .Site.Params.sitename | default "Tigers" }}</title>
 
-    <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}" defer >
 
     <!-- Internationalization stuff -->
     {{ if .IsTranslated }}

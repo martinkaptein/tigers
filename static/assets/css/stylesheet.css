@@ -67,6 +67,9 @@ a:hover {
 	text-align: center;
 }
 
+.bulletless {
+	list-style-type: none;
+}
 
 /*neccessary overwrites*/
 

@@ -2,34 +2,40 @@
 
 <section id="content">
     <!-- Language menu -->
-    <ul>
+    <ul class="bulletless">
 	    {{ range $.Site.Home.AllTranslations }}
+	    <li>
 	    <div>
 		    <div class="list">
 			    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
 		    </div>
 	    </div>
+	    </li>
 	    {{ end }}
     </ul>
 	<!--Menu-->
-    <ul>
+    <ul class="bulletless">
 	    {{ range .Site.Menus.main }}
+	    <li>
 	    <div>
 		    <div class="list">
 			    <a href="{{ .URL | absURL }}">{{ .Title }}</a>
 		    </div>
 	    </div>
+	    </li>
 	    {{ end }}
     </ul>
 	<!--Optional generic page listing-->
-    <ul>
+    <ul class="bulletless">
 	    {{ if ne .Site.Params.HomeListAllPages false }}
 	    {{ range .Pages }}
+	    <li>
 	    <div>
 		    <div class="list">
 			    <a href="{{ .Permalink }}">{{ .Title }}</a>
 		    </div>
 	    </div>
+	    </li>
 	    {{ end }}
 	    {{ end }}
     </ul>
