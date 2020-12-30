@@ -12,6 +12,8 @@ paginate = 20
 
 [params]
   HomeListAllPages = false
+  showAvatar = true
+  avatarImage = '/images/avatar.jpg'
   sitename = "Tigers"
   description = "Tigers theme description"
   subHeader = 'Hello World! I am the tigers theme for Hugo.'
@@ -32,7 +34,7 @@ languageName = "Nederlands"
 [languages.nl.params]
 # possible param overwrites go here
 sitename = "Tijgers"
-subHeader = 'Hallo Wereld! Ik ben het tijgers thema voor Hugo.'
+intro = 'Hallo Wereld! Ik ben het tijgers thema voor Hugo.'
 footerHTML = '(c) 2020 Mijn Naam'
 strNextPage = "volgende pagina"
 strPreviousPage = "vorige pagina"

@@ -58,16 +58,41 @@
     </head>
     <body>
 	    <header>
-        <section class="header">
+        <section class="header center">
 		<div>
             <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
-	    {{ if .IsHome }}
-	    <div class="subheader">
-	    <p>
-	    {{ .Site.Params.subHeader | safeHTML | default "Hello World! This is tigers theme." }}
-	    </p>
+		{{ if not .IsHome }}
+	    <nav>
+	    <div class="bottompad">
+		    <a id="menuButton" href="#">{{ .Site.Params.strMenu | default "Menu" }}</a>
+		<div id="hiddenMenu" class="left">
+			<ul class="bulletless">
+				{{ range .Site.Menus.main }}
+				<li>
+				<div class="list">
+				<a href="{{ .URL | absURL }}">{{ .Title }}</a>
+				</div>
+				</li>
+				{{ end }}	
+				<li>
+				<div class="list">
+				&nbsp;
+				</div>
+				</li>
+
+	    			{{ range $.Site.Home.AllTranslations }}
+				<li>
+				<div class="list">
+				<a href="{{ .Permalink }}">{{ .Language.LanguageName }} </a>
+				</div>
+				</li>
+				{{ end }}
+			</ul>
+		</div>
+
 	    </div>
+	    </nav>
 	    {{ end }}
-        </section>
-	</header>
+	</section>
+	    </header>

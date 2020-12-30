@@ -1,5 +1,8 @@
 <div class="footer">
 	{{ .Site.Params.footerHTML | default "(c) 2020 Tigers" | safeHTML }}
 </div>
+{{ if not .IsHome }}
+<script src="{{ "/assets/js/menu.js" | absURL }}"></script>
+{{ end }}
     </body>
 </html>

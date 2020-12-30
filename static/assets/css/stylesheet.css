@@ -19,11 +19,8 @@ a:hover {
 	text-decoration: none;
 }
 
-/* exceptions from default case: header, footer, subheader, list, pagination */
+/* exceptions from default case: header, footer, subheader, list, pagination, avatar */
 
-.header {
-    text-align: center;
-}
 
 .header a {
 	text-decoration: none;
@@ -70,6 +67,23 @@ a:hover {
 .bulletless {
 	list-style-type: none;
 }
+
+.circle {
+	border-radius: 50%;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.bottompad {
+	padding-bottom: 0.5em;
+}
+
 
 /*neccessary overwrites*/
 

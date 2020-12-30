@@ -16,7 +16,6 @@ You can see this theme in action [on my personal website](https://www.martinkapt
 - Multilingual
 - Blogging
 - Responsive
-- No JavaScript
 - SEO optimized
 - Easy setup
 - Fast

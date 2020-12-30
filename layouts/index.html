@@ -1,6 +1,19 @@
 {{ partial "header.html" . }}
 
 <section id="content">
+	<div class="center">
+	{{ if eq .Site.Params.showAvatar true }}
+	    <div>
+		    <img class="circle" src="{{ .Site.Params.avatarImage }}" alt="{{ .Site.Params.sitename }} avatar picture." width="120" height="120">
+	    </div>
+	    {{ end }}
+
+	    <div class="intro">
+	    <p>
+	    {{ .Site.Params.intro | safeHTML | default "Hello World! This is tigers theme." }}
+	    </p>
+	    </div>
+	</div>
     <!-- Language menu -->
     <ul class="bulletless">
 	    {{ range $.Site.Home.AllTranslations }}
