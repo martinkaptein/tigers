@@ -1,0 +1,128 @@
+/*body defaults*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    margin: auto;
+    max-width: 50em;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.65;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/bg.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #15223B;
+
+    /*
+     * proper average of 8.jpg
+    rgb(76, 86, 149)
+    #4c5695
+    hsl(232, 32%, 44%)
+
+    reduced vis hex rgba ... 0.6 (of this average):
+    #1e223b
+*/
+/* SHORTHAND CSS NOTATION
+ * background: url(background-photo.jpg) center center cover no-repeat fixed;
+ */
+}
+
+/*
+.background-pic {
+	background-image: url("/images/header.jpg");
+	background-color: #4d5794;
+	background-size: cover;
+	border-radius: 24px;
+}
+*/
+
+
+
+a {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* exceptions */
+
+h1 {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+h2, h3, h4, h5, h6 {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.list {
+    padding-bottom: 0.5em;
+}
+
+
+.list a {
+	text-decoration: none;
+}
+
+.list a:hover {
+	text-decoration: underline;
+}
+
+.menu a {
+	padding-left: 24px;
+}
+
+/*definitions*/
+
+.smalltext a {
+	font-size: 16px;
+}
+
+.bulletless {
+	list-style-type: none;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* neccessary fixes */
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    border-radius: 12px;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+pre code {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: block;
+	word-wrap: normal;
+	font-family: monospace;
+    }

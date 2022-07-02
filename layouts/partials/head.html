@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ .Language }}">
+<head>
+{{ "<!-- Welcome to Scriabin Club. The first rule of Scriabin Club is: You do not talk about Scriabin Club. The second rule of Scriabin Club is: You do not talk about Scriabin Club. -->" | safeHTML }}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='canonical' href='{{ .Permalink }}'>
+<!--
+  <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >
+-->
+
+    <meta name="description" content="{{ .Description }}">
+    {{ if .Params.Tags }}
+<meta name="keywords" content="{{ with .Params.Tags }}{{ delimit . ", " }}{{ end }}" />
+    {{ end}}
+    {{ if .Params.Keywords }}
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ end }}" />
+    {{ end}}
+    <meta name="author" content="{{ .Site.Params.siteAuthor }}">
+    <title>{{ .Title }} - {{ .Site.Params.sitename }}</title>
+
+    <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}" defer >
+    <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >
+<!--
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+-->
+
+<!-- Internationalization stuff -->
+<!--
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+  <link rel='alternate' hreflang='{{ .Lang }}' href='{{ .Permalink }}'>
+  {{ end }}
+  {{- with index .Site.Home.AllTranslations 0 -}}
+    <link rel='alternate' hreflang='x-default' href='{{ .Permalink }}'>
+    {{ end }}
+    {{ end }}-->
+    
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+  <link rel='alternate' hreflang='{{ .Language.Lang }}' href='{{ .Permalink }}'>
+  {{ end }}
+  {{ range first 1 .AllTranslations }}
+    <link rel='alternate' hreflang='x-default' href='{{ .Permalink }}'>
+    {{ end }}
+  {{ end }}
+
+    <!-- Icons and stuff -->
+    <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | absURL }}">
+    <meta name="theme-color" content="#4c5695">
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+
+
+
+<!-- Opengraph -->
+<meta property="og:title" content="{{ .Title | default "Tigers" }} - {{ .Site.Params.sitename | default "Tigers" }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .Params.metaImage }}
+{{ $metaImage := .Page.Resources.GetMatch .Params.metaImage }}
+{{ if ne $metaImage nil }}
+{{ $metaImage = $metaImage.Resize "600x jpg q50" }}
+<meta property="og:image" content="{{ $metaImage.Permalink | absURL }}">
+{{ else }}
+<meta property="og:image" content="{{ .Params.metaImage | absURL }}">
+{{ end }}
+{{ else }}
+<meta property="og:image" content="{{ "/images/default_meta_image.jpg" | absURL }}">
+{{ end }}
+
+
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Params.sitename }} RSS feed" href="{{ "/index.xml" | absURL }}" />
+
+    </head>

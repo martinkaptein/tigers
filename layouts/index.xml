@@ -1,0 +1,24 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Martin Kaptein</title>
+<link>{{ .Permalink }}index.xml</link>
+<atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
+<description>RSS feed on the website of Martin Kaptein.</description>
+<image>
+<title>Martin Kaptein</title>
+<url>{{ .Site.Params.avatarImage | absURL }}</url>
+<link>{{ .Permalink }}index.xml</link>
+</image>
+{{ range .Site.Pages }}
+<item>
+<title>{{ .Title }}</title>
+<link>{{ .Permalink }}</link>
+<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+<guid>{{ .Permalink }}</guid>
+<description>{{ .Description | html }}</description>
+</item>
+{{ end }}
+</channel>
+</rss>

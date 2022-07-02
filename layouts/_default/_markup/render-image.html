@@ -1,0 +1,18 @@
+{{/*$image := resources.Get .Destination*/}}
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if ne $image nil }}
+{{ if gt $image.Width 600 }}
+    {{ $image = $image.Resize "600x jpg q50" }}
+{{ else if gt $image.Width 300 }}
+    {{ $image = $image.Resize "300x jpg q50" }}
+{{ end }}
+<figure>
+	<img src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}"/>
+    {{ with .Text }} <figcaption><i>{{ . }}</i></figcaption>{{ end }}
+</figure>
+{{ else }}
+<figure>
+	<img src="{{ .Destination | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} />
+	{{ with .Text }} <figcaption><i>{{ . }}</i></figcaption> {{ end }}
+</figure>
+{{ end }}

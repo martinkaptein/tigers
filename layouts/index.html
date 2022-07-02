@@ -1,0 +1,14 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main>
+<article lang='{{ .Site.Language.Lang }}'>
+<section>
+    <h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content }}
+    </div>
+</section>
+</article>
+</main>
+{{ partial "footer.html" . }}

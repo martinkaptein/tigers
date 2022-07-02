@@ -1,0 +1,29 @@
+    <body>
+	    <header>
+        <section class="center">
+		<div class="list">
+			<h1><a href="/">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
+		</div>
+
+
+
+	    <nav>
+		    <!--
+	    <div>
+		    <a href="/">{{ .Site.Params.strHome }}</a>
+			    </div>
+		    -->
+		<div class="menu list">
+			{{ range .Site.Menus.main }}
+			    <a href="{{ .URL | absURL }}">{{ .Title }}</a>
+			{{ end }}
+		</div>
+		
+		<div class="menu list smalltext">
+		  {{ range $.Site.Home.AllTranslations }}
+		  <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+		  {{ end }}
+	
+	    </nav>
+	</section>
+	    </header>
