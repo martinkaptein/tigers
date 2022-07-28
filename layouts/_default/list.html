@@ -7,13 +7,9 @@
 	{{ range .Paginator.Pages }}
 	<li>
         <div class="list">
-		{{ if .Date }}
+	{{ partial "datecat.html" . }}
           <div>
-              <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "02 Jan 2006" }}</time>
-          </div>
-	  {{ end }}
-          <div>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </div>
         </div>
 	</li>

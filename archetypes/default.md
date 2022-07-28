@@ -1,23 +1,19 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-lastmod: {{ .Date }}
 draft: true
 # write a good description
 description: "Right here"
-metaImage: "/images/banner.jpg" 
-toc: false #Set to true to have Table of Content
-# choose only one cat(egory) bellow, make sure to localize (translate) it
+# meta image relative to this file
+metaImage: "banner.jpg" 
+#Set to true to have Table of Content
+toc: false 
+# cat = {tag&category&keyword}
 cat:
-  - publication
-  - news
-  - information
-# can add more keywords
-keywords:
-  - one
-  - two
+  - tiger
 ---
 
-## Start here
 (note: internal links ALWAYS should end with slash, link to static content directly, like [this](picture.jpg).
+
+## Heading
 

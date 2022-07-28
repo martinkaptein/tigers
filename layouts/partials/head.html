@@ -11,10 +11,10 @@
 
     <meta name="description" content="{{ .Description }}">
     {{ if .Params.Tags }}
-<meta name="keywords" content="{{ with .Params.Tags }}{{ delimit . ", " }}{{ end }}" />
+    <meta name="keywords" content="{{ with .Params.Tags }}{{ delimit . ", " }}{{ end }}, {{ with .Params.Cat }}{{ delimit . ", " }}{{ end }}" />
     {{ end}}
     {{ if .Params.Keywords }}
-<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ end }}" />
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ end }}, {{ with .Params.Cat }}{{ delimit . ", " }}{{ end }}" />
     {{ end}}
     <meta name="author" content="{{ .Site.Params.siteAuthor }}">
     <title>{{ .Title }} - {{ .Site.Params.sitename }}</title>

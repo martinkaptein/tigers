@@ -6,12 +6,7 @@
 <section>
     <h1>{{ .Title }}</h1>
     <div class="list">
-{{ if .Date }}
-	    <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "02 Jan 2006" }}</time>
-{{ end }}
-{{ range .Params.cat }}
-<a href="{{ "/" | relLangURL }}cat/{{ .  | urlize }}"><i>#{{ . }}</i></a>
-{{ end }}
+	{{ partial "datecat.html" . }}
     </div>
     {{ if eq true .Params.toc }}
 <div>
