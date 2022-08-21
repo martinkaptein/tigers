@@ -8,7 +8,7 @@ description: "Right here"
 metaImage: "banner.jpg" 
 #Set to true to have Table of Content
 toc: false 
-# cat = {tag&category&keyword}
+# cat = {tag&category(&keyword)}
 cat:
   - tiger
 ---

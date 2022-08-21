@@ -2,8 +2,10 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ $imageCrop := .Page.Resources.GetMatch .Destination }}
 {{ if ne $image nil }}
-{{ $imageCrop = $image.Resize "x240 jpg q50" }}
-	<a href="{{ $image.RelPermalink }}"><img src="{{ $imageCrop.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} width="{{ $imageCrop.Width }}" height="{{ $imageCrop.Height }}"/></a>
+{{ $imageCrop = $image.Resize "x360 jpg q50" }}
+<!--<a href="{{ $image.RelPermalink }}">-->
+	<img src="{{ $imageCrop.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} width="{{ $imageCrop.Width }}" height="{{ $imageCrop.Height }}"/>
+	<!--	</a>-->
 {{ else }}
 	<img src="{{ .Destination | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} />
 {{ end }}
