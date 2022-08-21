@@ -3,6 +3,7 @@
 
 <section id=content>
     <!--List of posts-->
+    <!--
     <ul class="bulletless list">
 	{{ range .Paginator.Pages }}
 	<li>
@@ -15,6 +16,19 @@
 	</li>
       {{ end }}
     </ul>
+    -->
+    <ul class="list">
+
+    {{ range .Paginator.Pages }}
+	    <li class="list">
+		    <div class="h3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+		    <div class="list">
+	{{ partial "datecat.html" . }}
+		    </div>
+	    </li>
+
+    {{ end }}
+	</ul>
     <!--Pagination menu-->
     <ul class="center bulletless">
 	    {{ with .Paginator.Prev }}

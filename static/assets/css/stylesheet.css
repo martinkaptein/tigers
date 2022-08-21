@@ -55,17 +55,30 @@ a:hover {
 /* exceptions */
 
 h1 {
-	font-size: 30px;
+	font-size: 26px; /*$ms+($ms*(1/3))*/
 	font-weight: 300;
 }
 
-h2, h3, h4, h5, h6 {
-	font-size: 25px;
+h2 {
+	font-size: 24px; /*$ms+($ms*(1/5))*/
+}
+
+h3 {
+	font-size: 23px; /*$ms+($ms*(1/7))*/
+}
+
+h4, h5, h6 {
+	font-size: 23px;
 	font-weight: 300;
 }
+
+
+
+/*for lists add padding and invert link decoration*/
 
 .list {
     padding-bottom: 0.5em;
+    list-style-type: none;
 }
 
 
@@ -83,8 +96,12 @@ h2, h3, h4, h5, h6 {
 
 /*definitions*/
 
+.h3 {
+	font-size: 23px; /*$ms+($ms*(1/7))*/
+}
+
 .smalltext a {
-	font-size: 16px;
+	font-size: 16px; /*$ms-($ms*(1/5))*/
 }
 
 .bulletless {
