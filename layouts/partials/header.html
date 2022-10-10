@@ -1,9 +1,9 @@
     <body>
 	    <header>
         <section class="center">
-		<a href="/"><img src="/logo/logo.svg" width="32" height="32"></a>
+		<a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}"><img alt="{{ .Site.Params.sitename }} logo" src="/logo/logo.svg" width="32" height="32"></a>
 		<div class="list">
-			<h1><a href="/">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
+			<h1><a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
 
 
