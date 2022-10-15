@@ -8,7 +8,7 @@ description: "Right here"
 metaImage: "banner.jpg" 
 #Set to true to have Table of Content
 toc: false 
-# cat = {tag&category(&keyword)}
+# cat = {tag&category(&keyword)}, so maximum of 3 of those >> See example.com/cat for an example of which categories to use
 cat:
   - tiger
 ---
