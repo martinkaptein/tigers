@@ -11,7 +11,7 @@ body {
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/bg.svg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
