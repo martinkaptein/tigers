@@ -3,9 +3,8 @@
 
 <main>
 <article lang='{{ .Site.Language.Lang }}'>
-<section>
     <h1>{{ .Title }}</h1>
-    <div class="list">
+    <div class="invertDecoration">
 	{{ partial "datecat.html" . }}
     </div>
     {{ if eq true .Params.toc }}
@@ -17,7 +16,6 @@
     <div>
         {{ .Content }}
     </div>
-</section>
 </article>
 </main>
 <!--

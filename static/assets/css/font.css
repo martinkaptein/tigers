@@ -25,3 +25,30 @@
        url('/assets/css/font/open-sans-v29-latin-ext_latin_cyrillic-ext_cyrillic-300.ttf') format('truetype'), /* Safari, Android, iOS */
        url('/assets/css/font/open-sans-v29-latin-ext_latin_cyrillic-ext_cyrillic-300.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
+
+/* open-sans-600 - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-300italic - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.woff') format('woff'), /* Modern Browsers */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/css/font/open-sans-v34-latin-ext_latin_cyrillic-ext_cyrillic-300italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}

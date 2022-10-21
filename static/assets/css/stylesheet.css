@@ -42,6 +42,9 @@ body {
 */
 
 
+strong, b {
+	font-weight: 600;
+}
 
 a {
     text-decoration: underline;
@@ -52,68 +55,39 @@ a:hover {
 	text-decoration: none;
 }
 
-/* exceptions */
-
 h1 {
-	font-size: 26px; /*$ms+($ms*(1/3))*/
+	font-size: 1.3em;/*$ms+($ms*(1/3)) before used to be 26px*/
 	font-weight: 300;
 }
 
-h2 {
-	font-size: 24px; /*$ms+($ms*(1/5))*/
+h2, h3, h4, h5, h6 {
+	font-size: 1.2em; /*before 24px with body default as 20*/
+	font-weight: 600;
 }
 
-h3 {
-	font-size: 23px; /*$ms+($ms*(1/7))*/
+/* definitions */
+
+.paddingBottom {
+	padding-bottom: 1em;
 }
 
-h4, h5, h6 {
-	font-size: 23px;
-	font-weight: 300;
+.horizontalList li {
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+	justify-content: center;
 }
 
-
-
-/*for lists add padding and invert link decoration*/
-
-.list {
-    padding-bottom: 0.5em;
-    list-style-type: none;
-}
-
-
-.list a {
+.invertDecoration a {
 	text-decoration: none;
 }
 
-.list a:hover {
+.invertDecoration a:hover {
 	text-decoration: underline;
 }
 
-.menu a {
-	padding-left: 24px;
-}
-
-/*definitions*/
-
-.h3 {
-	font-size: 23px; /*$ms+($ms*(1/7))*/
-}
-
-.smalltext a {
-	font-size: 16px; /*$ms-($ms*(1/5))*/
-}
-
-.bulletless {
+.bulletless ul {
 	list-style-type: none;
-}
-
-.circle {
-	border-radius: 50%;
-}
-
-.left {
-	text-align: left;
 }
 
 .center {
@@ -121,7 +95,7 @@ h4, h5, h6 {
 }
 
 
-/* neccessary fixes */
+/* fixes */
 
 img {
     max-width: 100%;

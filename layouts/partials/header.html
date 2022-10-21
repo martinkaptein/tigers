@@ -1,30 +1,26 @@
     <body>
-	    <header>
-        <section class="center">
+	    <header class="center invertDecoration horizontalList">
 		<a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}"><img alt="{{ .Site.Params.sitename }} logo" src="/logo/logo.svg" width="32" height="32"></a>
-		<div class="list">
+		<div>
 			<h1><a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
 
-
-
 	    <nav>
-		    <!--
-	    <div>
-		    <a href="/">{{ .Site.Params.strHome }}</a>
-			    </div>
-		    -->
-		<div class="menu list">
+			<ul>
 			{{ range .Site.Menus.main }}
+			<li>
 			    <a href="{{ .URL | absURL }}">{{ .Title }}</a>
+			</li>
 			{{ end }}
-		</div>
+			</ul>
 		
-		<div class="menu list smalltext">
+		<ul>
 		  {{ range $.Site.Home.AllTranslations }}
+		  <li>
 		  <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+		  </li>
 		  {{ end }}
+		</ul>
 	
 	    </nav>
-	</section>
 	    </header>

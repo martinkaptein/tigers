@@ -1,52 +1,27 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section id=content>
-    <!--List of posts-->
-    <!--
-    <ul class="bulletless list">
-	{{ range .Paginator.Pages }}
-	<li>
-        <div class="list">
-	{{ partial "datecat.html" . }}
-          <div>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </div>
-        </div>
-	</li>
-      {{ end }}
-    </ul>
-    -->
-    <ul class="list">
-
+<section id="content" class="invertDecoration bulletless">
+    <ul>
     {{ range .Paginator.Pages }}
-	    <li class="list">
-		    <div class="h3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-		    <div class="list">
+	    <li class="paddingBottom">
+		    <b><a href="{{ .RelPermalink }}">{{ .Title }}</a></b>
+		    <br />
 	{{ partial "datecat.html" . }}
-		    </div>
 	    </li>
 
     {{ end }}
 	</ul>
     <!--Pagination menu-->
-    <ul class="center bulletless">
+    <ul class="center">
 	    {{ with .Paginator.Prev }}
 	    <li>
-	    <div>
-		    <div class="list">
-			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strPreviousPage | default "previous page"}}</a>
-		    </div>
-	    </div>
+			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strPreviousPage | default "← Newer"}}</a>
 	    </li>
 	    {{ end }}
 	    {{ with .Paginator.Next }}
 	    <li>
-	    <div>
-		    <div class="list">
-			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strNextPage | default "next page"}}</a>
-		    </div>
-	    </div>
+			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strNextPage | default "Older →"}}</a>
 	    </li>
 	    {{ end }}
     </ul>
