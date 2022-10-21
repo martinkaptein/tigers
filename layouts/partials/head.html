@@ -20,7 +20,8 @@
     <title>{{ .Title }} - {{ .Site.Params.sitename }}</title>
 
     <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}" defer >
-    <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >
+    <!--<link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >-->
+    <link rel="preload" href="{{ "/assets/css/font.css" | absURL }}" as="font" type="font/woff2">
 <!--
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
