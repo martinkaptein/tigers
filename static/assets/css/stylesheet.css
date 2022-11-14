@@ -41,7 +41,12 @@ body {
 }
 */
 
-
+blockquote {
+	font-style: italic;
+	margin-left: 4em;
+	margin-right: 4em;
+}
+	
 strong, b {
 	font-weight: 600;
 }
