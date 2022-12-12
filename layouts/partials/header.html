@@ -15,9 +15,21 @@
 			</ul>
 		
 		<ul>
+			<!-- If translation extists point language menu entry to the translation of the current page, otherwise point to homepage -->
+			{{ $pageTranslationLanguageKeys := slice }}
+			{{ range .Translations }}
+			{{ $pageTranslationLanguageKeys = $pageTranslationLanguageKeys | append .Language.Lang }}
+
+ <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+			{{ end }}
+
+
 		  {{ range .Site.Home.AllTranslations }}
+		  {{ if not (in $pageTranslationLanguageKeys .Language.Lang) }}
 		  <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
 		  {{ end }}
+		  {{ end }}
+
 		</ul>
 	    </nav>
 	    </header>
