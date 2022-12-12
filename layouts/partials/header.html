@@ -1,8 +1,8 @@
     <body>
 	    <header class="center invertDecoration horizontalList">
-		<a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}"><img alt="{{ .Site.Params.sitename }} logo" src="/logo/logo.svg" width="32" height="32"></a>
+		    <a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><img alt="{{ .Site.Params.sitename }}." src="/logo/logo.svg" width="32" height="32"></a>
 		<div>
-			<h1><a href="/" aria-label="Link to homepage of {{ .Site.Params.sitename }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
+			<h1><a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
 
 	    <nav>
@@ -15,12 +15,9 @@
 			</ul>
 		
 		<ul>
-		  {{ range $.Site.Home.AllTranslations }}
-		  <li>
-		  <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-		  </li>
+		  {{ range .Site.Home.AllTranslations }}
+		  <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
 		  {{ end }}
 		</ul>
-	
 	    </nav>
 	    </header>
