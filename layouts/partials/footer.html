@@ -1,5 +1,10 @@
-<footer class="center">
+<footer class="center invertDecoration horizontalList">
+	<!--
 	{{ .Site.Params.footerHTML | default "(c) 2020 Tigers" | safeHTML }}
+	-->
+	© {{ now.Year }} {{ .Site.Params.sitename }} 
+	{{ range .Site.Menus.footer }} · <a href="{{ .URL | absURL }}">{{ .Title }}</a>
+	{{ end }}
 </footer>
 </body>
 </html>

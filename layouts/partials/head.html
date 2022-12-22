@@ -18,8 +18,12 @@
     {{ end}}
     <meta name="author" content="{{ .Site.Params.siteAuthor }}">
     <title>{{ .Title }} - {{ .Site.Params.sitename }}</title>
-
+<!--
     <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}" defer >
+-->
+
+{{ partial "style.html" . }}
+
     <link rel="stylesheet" href="{{ "/assets/css/font.css" | absURL }}" defer >
 
 <!-- Internationalization stuff -->

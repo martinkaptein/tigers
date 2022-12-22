@@ -1,6 +1,8 @@
     <body>
 	    <header class="center invertDecoration horizontalList">
-		    <a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><img alt="{{ .Site.Params.sitename }}." src="/logo/logo.svg" width="32" height="32"></a>
+		    {{ if .Site.Params.logo }}
+		    <a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><img alt="{{ .Site.Params.sitename }}." src="{{ .Site.Params.logo }}" width="42" height="42"></a>
+		    {{ end }}
 		<div>
 			<h1><a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
 		</div>
@@ -15,9 +17,9 @@
 			</ul>
 		
 		<ul>
-			<!-- If translation extists point language menu entry to the translation of the current page, otherwise point to homepage -->
+			<!-- If translation exists point language menu entry to the translation of the current page, otherwise point to homepage which should be translated  -->
 			{{ $pageTranslationLanguageKeys := slice }}
-			{{ range .Translations }}
+			{{ range .AllTranslations }}
 			{{ $pageTranslationLanguageKeys = $pageTranslationLanguageKeys | append .Language.Lang }}
 
  <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>

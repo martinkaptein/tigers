@@ -1,3 +1,4 @@
+<style>
 /*body defaults*/
 body {
     font-family: "Open Sans", sans-serif;
@@ -11,12 +12,14 @@ body {
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.svg');
+    {{ with .Site.Params.bgImage }}
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ . }}');
+    {{ end }}
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #15223B;
+    background-color: {{ .Site.Params.bgColor }};
 }
 
 blockquote {
@@ -100,3 +103,4 @@ pre code {
 	word-wrap: normal;
 	font-family: monospace;
     }
+</style>
