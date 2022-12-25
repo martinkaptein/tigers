@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 not found</title>
-
-    <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | absURL }}" defer >
-
-    <!-- Icons and stuff -->
-    <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | absURL }}">
-    <meta name="theme-color" content="#3399cc">
-
-
-    </head>
-
-
-{{ partial "header.html" . }}
-
-<main>
-<article>
-<section>
-    <h1>404 not found</h1>
-    <div>
-	    <p>404 page not found. Head <a href="/">back home</a>.
-    </div>
-    <div><p>Or <a href="/contact/">contact me</a> if you think this is an issue.</div>
-</section>
-</article>
-</main>
-{{ partial "footer.html" . }}
+{{ define "main" }}
+<h1>404 Error - Page not found</h1>
+<p>Return <a href="{{ .Site.Home.Permalink }}">to the homepage</a> or <a href="/contact/">contact {{ .Site.Params.sitename}}</a> if you think this is an issue.</p>
+{{ end }}

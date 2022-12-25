@@ -1,0 +1,26 @@
+<main>
+<article lang='{{ .Site.Language.Lang }}'>
+    <h1>{{ .Title }}</h1>
+    {{ if eq true .Params.toc }}
+<div>
+	{{.TableOfContents}}
+</div>
+{{ end }}
+
+    <div>
+        {{ .Content }}
+    </div>
+</article>
+</main>
+<!--
+<hr>
+<div class="list">
+{{ with .PrevInSection }}
+<a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ end }}
+<br />
+{{ with .NextInSection }}
+<a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ end }}
+</div>
+-->

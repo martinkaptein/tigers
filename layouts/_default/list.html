@@ -1,6 +1,4 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <section id="content" class="invertDecoration bulletless">
     <ul>
     {{ range .Paginator.Pages }}
@@ -26,5 +24,4 @@
 	    {{ end }}
     </ul>
   </section>
-
-{{ partial "footer.html" . }}
+{{ end }}
