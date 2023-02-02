@@ -1,10 +1,9 @@
-	    <header class="center invertDecoration horizontalList">
+	    <header class="header invertDecoration horizontalList">
+		    <h1><a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><b>{{ .Site.Params.sitename | default "Tigers"}}</b></a></h1>
 		    {{ if .Site.Params.logo }}
 		    <a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><img alt="{{ .Site.Params.sitename }}." src="{{ .Site.Params.logo }}" width="42" height="42"></a>
 		    {{ end }}
-		<div>
-			<h1><a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}">{{ .Site.Params.sitename | default "Tigers"}}</a></h1>
-		</div>
+
 
 	    <nav>
 			<ul>
@@ -16,22 +15,23 @@
 			</ul>
 		
 		<ul>
-			<!-- If translation exists point language menu entry to the translation of the current page, otherwise point to homepage which should be translated  -->
+			<!-- If translation exists point language menu entry to the translation of the current page, otherwise point to homepage which should be already translated  -->
 			{{ $pageTranslationLanguageKeys := slice }}
 			{{ range .AllTranslations }}
 			{{ $pageTranslationLanguageKeys = $pageTranslationLanguageKeys | append .Language.Lang }}
 
- <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+			<li><a href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a></li>
 			{{ end }}
 
 
 		  {{ range .Site.Home.AllTranslations }}
 		  {{ if not (in $pageTranslationLanguageKeys .Language.Lang) }}
-		  <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+		  <li><a href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a></li>
 		  {{ end }}
 		  {{ end }}
 
 		</ul>
 	    </nav>
-<hr />
 	    </header>
+
+<hr />
