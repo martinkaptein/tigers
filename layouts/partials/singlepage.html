@@ -15,15 +15,11 @@
     </div>
 </article>
 </main>
-<!--
-<hr>
-<div class="list">
+<ul class="invertDecoration horizontalList center">
 {{ with .PrevInSection }}
-<a href="{{ .Permalink }}">{{ .Title }}</a>
+<li><a href="{{ .Permalink }}">{{ $.Site.Params.strPreviousPage }} </a></li>
 {{ end }}
-<br />
 {{ with .NextInSection }}
-<a href="{{ .Permalink }}">{{ .Title }}</a>
+<li><a href="{{ .Permalink }}">{{ $.Site.Params.strNextPage }} </a></li>
 {{ end }}
-</div>
--->
+</ul>

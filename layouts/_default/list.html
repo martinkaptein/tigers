@@ -11,7 +11,7 @@
     {{ end }}
 	</ul>
     <!--Pagination menu-->
-    <ul class="center">
+    <ul class="invertDecoration horizontalList center">
 	    {{ with .Paginator.Prev }}
 	    <li>
 			    <a href="{{ .URL | absURL }}">{{ $.Site.Params.strPreviousPage | default "← Newer"}}</a>
