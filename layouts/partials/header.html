@@ -1,4 +1,4 @@
-	    <header class="center header invertDecoration horizontalList">
+	    <header class="header invertDecoration horizontalList">
 	    {{ if .Site.Params.logo }}
 		    <a href="{{ .Site.Home.Permalink }}" aria-label="{{ .Site.Params.strLinkDescriptor }}"><img alt="{{ .Site.Params.sitename }}." src="{{ .Site.Params.logo }}" width="42" height="42"></a>
 		    {{ end }}
@@ -14,6 +14,8 @@
 			{{ end }}
 			</ul>
 		</nav>
+
+		<nav>
 		
 		<ul>
 			<!-- If translation exists point language menu entry to the translation of the current page, otherwise point to homepage which should be already translated  -->
@@ -22,7 +24,7 @@
 			{{ $pageTranslationLanguageKeys = $pageTranslationLanguageKeys | append .Language.Lang }}
 
 			<li>
-				<a href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a>
+				<a lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a>
 			</li>
 			{{ end }}
 
@@ -30,7 +32,7 @@
 		  {{ range .Site.Home.AllTranslations }}
 		  {{ if not (in $pageTranslationLanguageKeys .Language.Lang) }}
 		  <li>
-			  <a href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a>
+			  <a lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}"><i>{{ .Language.LanguageName }}</i></a>
 		  </li>
 		  {{ end }}
 		  {{ end }}
