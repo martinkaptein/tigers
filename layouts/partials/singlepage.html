@@ -17,9 +17,9 @@
 </main>
 <ul class="invertDecoration horizontalList center">
 {{ with .PrevInSection }}
-<li><a href="{{ .Permalink }}">{{ $.Site.Params.strPreviousPage }} </a></li>
+<li><a href="{{ .Permalink }}">{{ $.Site.Params.strPreviousPage }} ({{ .Title | truncate 16 }})</a></li>
 {{ end }}
 {{ with .NextInSection }}
-<li><a href="{{ .Permalink }}">{{ $.Site.Params.strNextPage }} </a></li>
+<li><a href="{{ .Permalink }}">({{ .Title | truncate 16 }}) {{ $.Site.Params.strNextPage }}</a></li>
 {{ end }}
 </ul>
