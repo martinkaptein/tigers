@@ -1,4 +1,10 @@
 {{ define "main" }}
+<section>
+<h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content }}
+    </div>
+    </section>
 <section id="content" class="invertDecoration bulletless">
     <ul>
     {{ range .Paginator.Pages }}
