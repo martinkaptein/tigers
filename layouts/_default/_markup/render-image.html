@@ -2,9 +2,11 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ $imageCrop := .Page.Resources.GetMatch .Destination }}
 {{ if ne $image nil }}
-{{ $imageCrop = $image.Resize "x360 jpg q50" }}
+{{ $imageCrop = $image.Resize "x720 jpg q75" }}
 <!--<a href="{{ $image.RelPermalink }}">-->
-	<img src="{{ $imageCrop.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} width="{{ $imageCrop.Width }}" height="{{ $imageCrop.Height }}"/>
+{{ $width := div $imageCrop.Width 3 }}
+{{ $height := div $imageCrop.Height 3 }}
+	<img src="{{ $imageCrop.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} width="{{ $width }}" height="{{ $height }}"/>
 	<!--	</a>-->
 {{ else }}
 	<img src="{{ .Destination | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} />
